@@ -67,19 +67,19 @@ void buildScript2(char **lines, Script *script)
 	script->commands = malloc(sizeof(*script->commands) * (commandCount + 1));
 	if (!script->commands)
 	{
-OAOAOA		free(script->str);
-OAOAOA		for (i = 0; lines[i]; i++)
-OAOAOA			free(lines[i]);
+		free(script->str);
+		for (i = 0; lines[i]; i++)
+			free(lines[i]);
 		free(lines);
-OAOAOA		free(script);
+		free(script);
 		exit(EXIT_FAILURE);
 	}
 	script->commands[commandCount] = NULL;
 
 	for (i = 0; i < commandCount; i++)
 		script->commands[i] =  buildCommand(copyStr(lines[i]));
-OAOAOA
+
 	for (i = 0; lines[i]; i++)
-OAOAOA		free(lines[i]);
-OAOAOA	free(lines);
+		free(lines[i]);
+	free(lines);
 }
