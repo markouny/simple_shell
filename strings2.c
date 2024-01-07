@@ -82,20 +82,20 @@ char contains(const char *str, char c)
 
 /**
  * isPositiveDigits - checks that all the characters of s are digits in 0 : 9
-OAOAOAOAOAOA *
-OAOAOAOAOAOA * @s: the string
+ *
+ * @s: the string
  * Return: 1 if they're all digitrs form 0 to 9,
  * 0 otherwise
-OAOAOA*/
+*/
 char isPositiveDigits(char *s)
 {
 	int i;
 
-OAOAOAOAOAOAOAOAOA	if (!s || !s[0])
-OAOAOA		return ('\0');
+	if (!s || !s[0])
+		return ('\0');
 
 	for (i = 0; s[i]; i++)
-OAOAOA		if (s[i] < 48 || s[i] > 57)
+		if (s[i] < 48 || s[i] > 57)
 			return (0);
 	return (1);
-OAOAOAOAOAOA}
+}
