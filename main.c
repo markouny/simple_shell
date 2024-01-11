@@ -41,7 +41,7 @@ int main(int ac, char **av)
 	{
 		while (1)
 		{
-			print(STDOUT_FILENO, "#cisfun$ ");
+			print(STDOUT_FILENO, "#mkshell$ ");
 			command = buildCommand(NULL);
 			if (command->argv[0])
 				executeCommand(command, NULL);
